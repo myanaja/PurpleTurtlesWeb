@@ -14,25 +14,13 @@
     </style>
 
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="#intro-to-git">Intro to Git</a></li>
-            <li><a href="#intro-to-design">Intro to Design</a></li>
-            <li><a href="#intro-to-python">Intro to Python</a></li>
-            <li><a href="#intro-to-web-dev">Intro to Web Dev</a></li>
-            <li><a href="#weekend-takeaways">Weekend Takeaways</a></li>
-        </ul>
-    </nav>
     <header>
         <h1 style="background-color:rgb(206, 150, 249);">PurpleTurtles <a href="https://shehacks.ca" style = "text-decoration:none">SheHacks+</a>  7 Hacker Olympics Summary</h1>
         <h3><em>Who are the PurpleTurtles?</em></>
         <p>Hello, we're Team PurpleTurtles! We're a group of four female students that share a passion for programming, learning new skills, and meeting new people! We come from various different cultural, educational, and ethnic backgrounds and have come together to celebrate women in STEM at Shehacks+.</p>
-        
-        </header>
-    
-        <section class="git"> 
-        <h2 id="intro-to-git" style="background-color:rgb(174, 153, 246);">Meet the Team!</h2>
+        <h2 style="background-color:rgb(174, 153, 246);">Meet the Team!</h2>
         <img src="C:\Users\sabrina\Documents\GitHubChallenge\PurpleTurtlesWeb\image\IMG_3685.jpg" width="500" height="650" alt="PurpleTurtles Team" class="center">
         
     </header>
@@ -40,71 +28,78 @@
         <p> Left to Right: <em>Sabrina, Mya, Hailey, Sara</em></p>
         <p>Sabrina: <em>“Hi everyone! I’m a third year Medical Sciences and Computer Science student here at Western. My favourite part about attending SheHacks+ this year was meeting my wonderful team and learning various new skills that I can’t wait to put into practice! Hope everyone enjoyed their time here and best of luck!”</em></p>
         <p>Mya: <em>“Hi! I’m a second year Computer Science student at University of Toronto. Joining this year SheHacks+ has been an amazing experience. I got to meet and work with new friends, learn new skills, and have fun!”</em></p>
-        <p>Hailey: <em>“Hi”</em></p>
-        <p>sara: <em>“Hiii! I’m a first year Computer Science student at UWO. This year SheHacks+ was wonderful, it helped me to find great new friends, new skills and a passion to continue my path to the world of Computer Technology. I hope everyone had also enjoyed the contest and found it helpful.”</em></p>
-        <h2 id="intro-to-git" style="background-color:rgb(143, 143, 243);">Intro to <a href="https://git-scm.com/" style = "text-decoration:none">Git</a>:  </h2>
+        <p>Hailey: <em>“This is my first hackathon and I have only been coding for a little more than a  year. My first love is Python. I have since learned Java and MatLabs, but in the past two days I have learned how to use GitHub, Figma, HTML and CSS! I even learned how to create the nav bar on this page!! I am in Kinesiology and I would like to work on wearables in the future and taking the data collected to help improve the users health. But I think Kelly (UX Design and Product Design) may have shifted what part of the wearable experience I want to be a part of. ”</em></p>
+        <p>Sara: <em>“Hiii! I’m a first year Computer Science student at UWO. This year SheHacks+ was wonderful, it helped me to find great new friends, new skills and a passion to continue my path to the world of Computer Technology. I hope everyone had also enjoyed the contest and found it helpful.”</em></p>
+        <h2 style="background-color:rgb(143, 143, 243);">Intro to <a href="https://git-scm.com/" style = "text-decoration:none">Git</a>:  </h2>
         <ul>
             <li>What is git? Git is a distributed version control system that lets you track changes in a set of files</li>
             <li>What is github? GitHub is a hosting service for software development and version control that uses Git</li>
             <li>What does git do?  Tracking code changes, Tracking who made changes, Coding collaboration</li> 
             <li>Our Project: <em>Check out our <a href="https://sabrinak26.github.io/PurpleTurtles/" style = "text-decoration:none">GitHub</a> and see if you can figure out some of our "2 Truths and a Lie"!!</em></li>
         </ul>
-        <div class="code-block"></div>
+        <div class="code-block">Some terminal commands</div>
+	    <ul>
+	        <li>git cd  [directory name]: to change the directory</li>
+	        <li>git checkout -b “username”: to create new branch</li>
+            <li>git commit -m “message”: to save all the changes on the current branch</li>
+            <li>git push: a command to send the changes to the main branch and save it to the repository</li>
+        </ul>
+
         <img src="C:\Users\sabrina\Documents\GitHubChallenge\PurpleTurtlesWeb\image\githubPages.png" width="1200" height="650" alt="Figma Design" class="center">
     </section>
 
     <section class="python">
-        <h2 id="intro-to-python" style="background-color:rgb(144, 121, 226);">Intro to Python</h2>
+        <h2 style="background-color:rgb(144, 121, 226);">Intro to Python</h2>
         <ul>
-            <li>Key Points:</li>
-            <li>Importance:</li>
-            <li>Our Project:</li>
+            <li>What is Python? A high level programming language that’s designed to be easy to read and easy to implement.</li>
+            <li>Importance: Some of the very famous application created based on python ex.instagram, and it is widely used in the tech field. </li>
         </ul>
+        <p>Here is a simple guessing game you can use to learn Python: </p>
+        <p><em>Test this out on your own (maybe on an online Python IDE) and see the magic of coding!!</em></p>
         <div class="code-block">
-            <pre>print("Hello world!")</pre>
+            <pre>
+                import random
+
+                # Generate a random number between 1 and 100
+                answer = random.randint(1, 100)
+                
+                # Ask the user to guess the number
+                guess = int(input("Guess a number between 1 and 100: "))
+                
+                # Keep track of the number of guesses
+                guesses = 1
+                
+                # Loop until the user guesses the correct number
+                while guess != answer:
+                    if guess < answer:
+                        print("Too low! Try again.")
+                    else:
+                        print("Too high! Try again.")
+                    guess = int(input("Guess a number between 1 and 100: "))
+                    guesses += 1
+                
+                # Print a message when the user guesses the correct number
+                print("Congratulations! You guessed the correct number in", guesses, "guesses.")</pre>
         </div>
     </section>
 
     <section class="design">
-        <h2 id="intro-to-design" style="background-color:rgb(192, 123, 245);">Intro to Design</h2>
+        <h2 style="background-color:rgb(192, 123, 245);">Intro to Design (Figma)</h2>
         <ul>
-            <li>Key Points:</li>
-            <li>Importance:</li>
-            <li>Our Project:</li>
+            <li>Key Points: Discover, Define, Develop, and Deliver</li>
+            <li>Importance: By discovering the issue, defining the problem and developing a solution we can deliver a better product. That’s the value of design and why learning about it is so valuable. </li>
+            <li>Our Project: <em>Check out our <a href="https://www.figma.com/file/VDXJLAssW9IqMWGMa7rn2M/Hackathon-Olympics-%233?node-id=0%3A1&t=jdkvItauVyPFJ35M-1" style = "text-decoration:none">Figma</a> project where we create use design to help you and your friends figure out where you should eat next!</em></li>
         </ul>
         <img src="C:\Users\sabrina\Documents\GitHubChallenge\PurpleTurtlesWeb\image\Screenshot 2023-01-14 213035.jpg" alt="Figma Design" class="center">
     </section>
     
     <section class="web-dev">
-        <h2 id="intro-to-web-dev" style="background-color:rgb(246, 152, 219);">Intro to Web Dev: HTML & CSS</h2>
+        <h2 style="background-color:rgb(246, 152, 219);">Intro to Web Dev: HTML & CSS</h2>
         <ul>
-            <li>Key Points:</li>
-            <li>Importance:</li>
-            <li>Our Project:</li>
+            <li>What is HTML and CSS? HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications. (source: <a href="https://www.w3.org/standards/webdesign/htmlcss.html">W3C</a>)</li>
+            <li>Why should you learn it? You can use HTML to create your own websites for class projects, resumes etc.</li>
         </ul>
-        <div class="code-block">
-            <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="en"&gt;
-                    &lt;head&gt;
-                        &lt;meta charset="UTF-8"&gt;
-                        &lt;title&gt;My page title&lt;/title&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                        &lt;!-- page content here --&gt;
-                    &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
-        </div>
     </section>
-     <section id="weekend-takeaways" class="Weekend Takeaway">
-        <h2>Four Weekend Takeaways</h2>
-        <ol>
-            <li>Sabrina-Bring more caffeine</li>
-            <li>Hailey-Research more about front end development</li>
-            <li>Mya-</li>
-            <li>Sara-Love VSCode and have fun</li>
-         </ol>
     <footer>
         <p>phone | <a href="mailto:hello@myemail.com">hello@myemail.com</a> | <a href="https://www.linkedin.com">linkedin</a> | github</p>
         <p>© Your Name</p>
